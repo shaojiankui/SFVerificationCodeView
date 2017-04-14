@@ -33,7 +33,7 @@ self.codeView.mode = SFVerificationCodeModeServer;
 }
 ```
 
-##代码方式
+## 代码方式
 
 ```
 //设置验证码生成模式 服务器请求验证码

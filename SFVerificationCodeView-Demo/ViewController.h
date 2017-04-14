@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RandomCodeView.h"
+#import "SFVerificationCodeView.h"
 @interface ViewController : UIViewController
-@property (weak, nonatomic) IBOutlet RandomCodeView *codeView;
+@property (weak, nonatomic) IBOutlet SFVerificationCodeView *codeView;
 
 @end
 

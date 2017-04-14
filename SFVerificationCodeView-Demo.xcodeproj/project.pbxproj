@@ -13,22 +13,11 @@
 		A28D7D331A57FB9600A69EC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A28D7D311A57FB9600A69EC7 /* Main.storyboard */; };
 		A28D7D351A57FB9600A69EC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A28D7D341A57FB9600A69EC7 /* Images.xcassets */; };
 		A28D7D381A57FB9600A69EC7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A28D7D361A57FB9600A69EC7 /* LaunchScreen.xib */; };
-		A28D7D441A57FB9600A69EC7 /* RandomCode_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A28D7D431A57FB9600A69EC7 /* RandomCode_DemoTests.m */; };
-		A28D7D4F1A57FCE400A69EC7 /* RandomCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = A28D7D4E1A57FCE400A69EC7 /* RandomCodeView.m */; };
+		B89FBD351EA0A82100ED8360 /* SFVerificationCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B89FBD341EA0A82100ED8360 /* SFVerificationCodeView.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		A28D7D3E1A57FB9600A69EC7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A28D7D1C1A57FB9600A69EC7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A28D7D231A57FB9600A69EC7;
-			remoteInfo = "RandomCode-Demo";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		A28D7D241A57FB9600A69EC7 /* RandomCode-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RandomCode-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A28D7D241A57FB9600A69EC7 /* SfVerificationCodeView-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SfVerificationCodeView-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A28D7D281A57FB9600A69EC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A28D7D291A57FB9600A69EC7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A28D7D2B1A57FB9600A69EC7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -38,22 +27,12 @@
 		A28D7D321A57FB9600A69EC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A28D7D341A57FB9600A69EC7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A28D7D371A57FB9600A69EC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		A28D7D3D1A57FB9600A69EC7 /* RandomCode-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RandomCode-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A28D7D421A57FB9600A69EC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A28D7D431A57FB9600A69EC7 /* RandomCode_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RandomCode_DemoTests.m; sourceTree = "<group>"; };
-		A28D7D4D1A57FCE400A69EC7 /* RandomCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomCodeView.h; sourceTree = "<group>"; };
-		A28D7D4E1A57FCE400A69EC7 /* RandomCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomCodeView.m; sourceTree = "<group>"; };
+		B89FBD331EA0A82100ED8360 /* SFVerificationCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFVerificationCodeView.h; sourceTree = "<group>"; };
+		B89FBD341EA0A82100ED8360 /* SFVerificationCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFVerificationCodeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A28D7D211A57FB9600A69EC7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A28D7D3A1A57FB9600A69EC7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -66,8 +45,7 @@
 		A28D7D1B1A57FB9600A69EC7 = {
 			isa = PBXGroup;
 			children = (
-				A28D7D261A57FB9600A69EC7 /* RandomCode-Demo */,
-				A28D7D401A57FB9600A69EC7 /* RandomCode-DemoTests */,
+				A28D7D261A57FB9600A69EC7 /* SFVerificationCodeView-Demo */,
 				A28D7D251A57FB9600A69EC7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,17 +53,15 @@
 		A28D7D251A57FB9600A69EC7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A28D7D241A57FB9600A69EC7 /* RandomCode-Demo.app */,
-				A28D7D3D1A57FB9600A69EC7 /* RandomCode-DemoTests.xctest */,
+				A28D7D241A57FB9600A69EC7 /* SfVerificationCodeView-Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A28D7D261A57FB9600A69EC7 /* RandomCode-Demo */ = {
+		A28D7D261A57FB9600A69EC7 /* SFVerificationCodeView-Demo */ = {
 			isa = PBXGroup;
 			children = (
-				A28D7D4D1A57FCE400A69EC7 /* RandomCodeView.h */,
-				A28D7D4E1A57FCE400A69EC7 /* RandomCodeView.m */,
+				B89FBD321EA0A82100ED8360 /* SFVerificationCodeView */,
 				A28D7D2B1A57FB9600A69EC7 /* AppDelegate.h */,
 				A28D7D2C1A57FB9600A69EC7 /* AppDelegate.m */,
 				A28D7D2E1A57FB9600A69EC7 /* ViewController.h */,
@@ -95,7 +71,7 @@
 				A28D7D361A57FB9600A69EC7 /* LaunchScreen.xib */,
 				A28D7D271A57FB9600A69EC7 /* Supporting Files */,
 			);
-			path = "RandomCode-Demo";
+			path = "SFVerificationCodeView-Demo";
 			sourceTree = "<group>";
 		};
 		A28D7D271A57FB9600A69EC7 /* Supporting Files */ = {
@@ -107,29 +83,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A28D7D401A57FB9600A69EC7 /* RandomCode-DemoTests */ = {
+		B89FBD321EA0A82100ED8360 /* SFVerificationCodeView */ = {
 			isa = PBXGroup;
 			children = (
-				A28D7D431A57FB9600A69EC7 /* RandomCode_DemoTests.m */,
-				A28D7D411A57FB9600A69EC7 /* Supporting Files */,
+				B89FBD331EA0A82100ED8360 /* SFVerificationCodeView.h */,
+				B89FBD341EA0A82100ED8360 /* SFVerificationCodeView.m */,
 			);
-			path = "RandomCode-DemoTests";
-			sourceTree = "<group>";
-		};
-		A28D7D411A57FB9600A69EC7 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A28D7D421A57FB9600A69EC7 /* Info.plist */,
-			);
-			name = "Supporting Files";
+			path = SFVerificationCodeView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A28D7D231A57FB9600A69EC7 /* RandomCode-Demo */ = {
+		A28D7D231A57FB9600A69EC7 /* SfVerificationCodeView-Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A28D7D471A57FB9600A69EC7 /* Build configuration list for PBXNativeTarget "RandomCode-Demo" */;
+			buildConfigurationList = A28D7D471A57FB9600A69EC7 /* Build configuration list for PBXNativeTarget "SfVerificationCodeView-Demo" */;
 			buildPhases = (
 				A28D7D201A57FB9600A69EC7 /* Sources */,
 				A28D7D211A57FB9600A69EC7 /* Frameworks */,
@@ -139,28 +107,10 @@
 			);
 			dependencies = (
 			);
-			name = "RandomCode-Demo";
+			name = "SfVerificationCodeView-Demo";
 			productName = "RandomCode-Demo";
-			productReference = A28D7D241A57FB9600A69EC7 /* RandomCode-Demo.app */;
+			productReference = A28D7D241A57FB9600A69EC7 /* SfVerificationCodeView-Demo.app */;
 			productType = "com.apple.product-type.application";
-		};
-		A28D7D3C1A57FB9600A69EC7 /* RandomCode-DemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A28D7D4A1A57FB9600A69EC7 /* Build configuration list for PBXNativeTarget "RandomCode-DemoTests" */;
-			buildPhases = (
-				A28D7D391A57FB9600A69EC7 /* Sources */,
-				A28D7D3A1A57FB9600A69EC7 /* Frameworks */,
-				A28D7D3B1A57FB9600A69EC7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A28D7D3F1A57FB9600A69EC7 /* PBXTargetDependency */,
-			);
-			name = "RandomCode-DemoTests";
-			productName = "RandomCode-DemoTests";
-			productReference = A28D7D3D1A57FB9600A69EC7 /* RandomCode-DemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -174,13 +124,9 @@
 					A28D7D231A57FB9600A69EC7 = {
 						CreatedOnToolsVersion = 6.1;
 					};
-					A28D7D3C1A57FB9600A69EC7 = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = A28D7D231A57FB9600A69EC7;
-					};
 				};
 			};
-			buildConfigurationList = A28D7D1F1A57FB9600A69EC7 /* Build configuration list for PBXProject "RandomCode-Demo" */;
+			buildConfigurationList = A28D7D1F1A57FB9600A69EC7 /* Build configuration list for PBXProject "SFVerificationCodeView-Demo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -193,8 +139,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A28D7D231A57FB9600A69EC7 /* RandomCode-Demo */,
-				A28D7D3C1A57FB9600A69EC7 /* RandomCode-DemoTests */,
+				A28D7D231A57FB9600A69EC7 /* SfVerificationCodeView-Demo */,
 			);
 		};
 /* End PBXProject section */
@@ -210,13 +155,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A28D7D3B1A57FB9600A69EC7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -225,29 +163,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A28D7D301A57FB9600A69EC7 /* ViewController.m in Sources */,
+				B89FBD351EA0A82100ED8360 /* SFVerificationCodeView.m in Sources */,
 				A28D7D2D1A57FB9600A69EC7 /* AppDelegate.m in Sources */,
-				A28D7D4F1A57FCE400A69EC7 /* RandomCodeView.m in Sources */,
 				A28D7D2A1A57FB9600A69EC7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A28D7D391A57FB9600A69EC7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A28D7D441A57FB9600A69EC7 /* RandomCode_DemoTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A28D7D3F1A57FB9600A69EC7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A28D7D231A57FB9600A69EC7 /* RandomCode-Demo */;
-			targetProxy = A28D7D3E1A57FB9600A69EC7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A28D7D311A57FB9600A69EC7 /* Main.storyboard */ = {
@@ -349,8 +271,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "RandomCode-Demo/Info.plist";
+				INFOPLIST_FILE = "SFVerificationCodeView-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.skyfox.SFVerificationCodeView-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -359,50 +282,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "RandomCode-Demo/Info.plist";
+				INFOPLIST_FILE = "SFVerificationCodeView-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.skyfox.SFVerificationCodeView-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		A28D7D4B1A57FB9600A69EC7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "RandomCode-DemoTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RandomCode-Demo.app/RandomCode-Demo";
-			};
-			name = Debug;
-		};
-		A28D7D4C1A57FB9600A69EC7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "RandomCode-DemoTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RandomCode-Demo.app/RandomCode-Demo";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A28D7D1F1A57FB9600A69EC7 /* Build configuration list for PBXProject "RandomCode-Demo" */ = {
+		A28D7D1F1A57FB9600A69EC7 /* Build configuration list for PBXProject "SFVerificationCodeView-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A28D7D451A57FB9600A69EC7 /* Debug */,
@@ -411,21 +301,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A28D7D471A57FB9600A69EC7 /* Build configuration list for PBXNativeTarget "RandomCode-Demo" */ = {
+		A28D7D471A57FB9600A69EC7 /* Build configuration list for PBXNativeTarget "SfVerificationCodeView-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A28D7D481A57FB9600A69EC7 /* Debug */,
 				A28D7D491A57FB9600A69EC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		A28D7D4A1A57FB9600A69EC7 /* Build configuration list for PBXNativeTarget "RandomCode-DemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A28D7D4B1A57FB9600A69EC7 /* Debug */,
-				A28D7D4C1A57FB9600A69EC7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

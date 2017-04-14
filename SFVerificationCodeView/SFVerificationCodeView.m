@@ -1,14 +1,14 @@
 //
-//  RandomCodeView.m
+//  SFVerificationCodeView..m
 //  RandomCode-Demo
 //
 //  Created by Jakey on 15/1/3.
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
 //
 
-#import "RandomCodeView.h"
+#import "SFVerificationCodeView.h"
 
-@implementation RandomCodeView
+@implementation SFVerificationCodeView
 
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -29,10 +29,10 @@
     self.userInteractionEnabled = YES;
     _tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(generateCode:)];
     [self addGestureRecognizer:_tap];
-    self.count = 5;
+    _length = 5;
     self.backgroundColor = [UIColor whiteColor];
-    
 }
+
 - (UIColor *)randomColor {
     NSInteger aRedValue = arc4random() % 255;
     NSInteger aGreenValue = arc4random() % 255;
@@ -45,49 +45,77 @@
     //小写字母: 97-122
     //大写字母: 65-90
     char chars[] = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLOMNOPQRSTUVWXYZ";
-    char codes[self.count];
+    char codes[self.length];
     
-    for(int i=0;i<self.count; i++){
+    for(int i=0;i<self.length; i++){
         codes[i]= chars[arc4random()%62];
     }
     
     NSString *text = [[NSString alloc] initWithBytes:codes
-                                              length:self.count encoding:NSUTF8StringEncoding];
+                                              length:self.length encoding:NSUTF8StringEncoding];
     return text;
 }
-- (void)generateCode:(UITapGestureRecognizer *)tap {
-    [self setNeedsDisplay];
-}
--(void)didChangeCode:(DidChangeCode)didChangeCode{
-    if (didChangeCode) {
-        _didChangeCode = [didChangeCode copy];
+- (void)generateVerificationCode{
+    if (self.mode == SFVerificationCodeModeLocal) {
+        self.code = [self randomCode];
+    }
+    if (_willChangeVerificationCode) {
+        _willChangeVerificationCode(_mode);
     }
 }
-
+- (void)generateCode:(UITapGestureRecognizer *)tap{
+    if (!self.userInteractionEnabled) {
+        return;
+    }
+    [self generateVerificationCode];
+}
+-(void)setCode:(NSString *)code{
+    _code = [code copy];
+    [self setNeedsDisplay];
+}
+-(void)setMode:(SFVerificationCodeMode)mode{
+    _mode = mode;
+    [self setNeedsDisplay];
+}
+-(void)setLength:(NSUInteger)length{
+    _length = length;
+    if (self.mode == SFVerificationCodeModeLocal) {
+        [self generateVerificationCode];
+    }
+}
+-(void)didChangeVerificationCode:(SFVerificationCodeDidChange)didChangeVerificationCode{    _didChangeVerificationCode = [didChangeVerificationCode copy];
+    [self setNeedsDisplay];
+}
+-(void)willChangeVerificationCode:(SFVerificationCodeWillChange)willChangeVerificationCode{
+    _willChangeVerificationCode = [willChangeVerificationCode copy];
+    [self setNeedsDisplay];
+}
 -(void)drawRect:(CGRect)rect{
    [super drawRect:rect];
     CGContextRef context = UIGraphicsGetCurrentContext();
-  
-    NSString *text = [self randomCode];
-    //生成文字
-    if (_didChangeCode) {
-        _didChangeCode(text);
+    
+    if ([_code description].length == 0) {
+        return;
     }
+    if (_didChangeVerificationCode) {
+        _didChangeVerificationCode(_code);
+    }
+    
     CGSize charSize =  [@"A" sizeWithAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:20.0]}];
     
     CGPoint point;
     float pointX, pointY;
 
     
-    int width = self.frame.size.width / text.length - charSize.width;
+    int width = self.frame.size.width / _code.length - charSize.width;
     int height = self.frame.size.height - charSize.height;
 
-    for (int i = 0; i < text.length; i++) {
-        pointX = arc4random() % width + self.frame.size.width / text.length * i;
+    for (int i = 0; i < _code.length; i++) {
+        pointX = arc4random() % width + self.frame.size.width / _code.length * i;
         pointY = arc4random() % height;
         
         point = CGPointMake(pointX, pointY);
-        unichar c = [text characterAtIndex:i];
+        unichar c = [_code characterAtIndex:i];
         NSString *textChar = [NSString stringWithFormat:@"%C", c];
         CGContextSetLineWidth(context, 1.0);
         //[[UIColor blueColor] set];
@@ -98,7 +126,7 @@
     
     //干扰线
     CGContextSetLineWidth(context, 1.0);
-    for(int i = 0; i < self.count; i++) {
+    for(int i = 0; i < self.code.length; i++) {
         CGContextSetStrokeColorWithColor(context, [[self randomColor] CGColor]);
         pointX = arc4random() % (int)self.frame.size.width;
         pointY = arc4random() % (int)self.frame.size.height;
@@ -110,7 +138,7 @@
     }
     //干扰点
 
-    for(int i = 0;i < self.count*6;i++) {
+    for(int i = 0;i < self.code.length*6;i++) {
         CGContextSetStrokeColorWithColor(context, [[self randomColor] CGColor]);
         pointX = arc4random() % (int)self.frame.size.width;
         pointY = arc4random() % (int)self.frame.size.height;

@@ -10,7 +10,7 @@ SFVerificationCodeView,实现iOS本地生成随机验证码, 从服务器读取�
 ## XIB拖拽方式
 
 ```
-//设置验证码生成模式  本地生成
+//设置验证码生成模式  服务器端生成验证码
 self.codeView.mode = SFVerificationCodeModeServer;
 [self.codeView willChangeVerificationCode:^(SFVerificationCodeMode mode) {
     NSLog(@"请求服务器生成code");
@@ -36,7 +36,7 @@ self.codeView.mode = SFVerificationCodeModeServer;
 ## 代码方式
 
 ```
-//设置验证码生成模式 服务器请求验证码
+//设置验证码生成模式 本地生成验证码
 view.mode = SFVerificationCodeModeLocal;
 [view willChangeVerificationCode:^(SFVerificationCodeMode mode) {
     NSLog(@"本地随机生成code");
